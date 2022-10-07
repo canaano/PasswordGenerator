@@ -25,10 +25,19 @@ function getRandomInt(max) {
   return Math.ceil(Math.random() * max)
 }
 
+
 // Function to generate password
 function generatePassword() {
 // Step 1: How many characters does the user want the password to be?
   var passwordLength = prompt("How long would you like your password to be? (8 - 128)", "12")
+
+// set perameters to make sure password is not < 8 or > 128
+if (passwordLength < 8 || passwordLength > 128) {
+  alert('Password must be between 8 and 128 characters... Come on. Be Secure!!!')
+  return generatePassword();
+}
+
+
 // Step 2: Ask if user wants to use uppercase?
   var useUppercase = confirm('Use uppercase letters?')
 // Step 3: Ask if user wants to use lowercase?
