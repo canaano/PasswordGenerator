@@ -47,6 +47,11 @@ if (passwordLength < 8 || passwordLength > 128) {
 // Step 5: Ask if user wants to use special characters?
   var useSpecialCharacters = confirm("Use Special Characters?")
 
+  if (useLowercase === false && useUppercase === false && useNumbers === false && useSpecialCharacters === false){
+    alert('Come on. Make at least one decision in life!!! Geez!')
+    return generatePassword();
+  }
+
 // Set up formula to randomize the confirmed choices?
 
 //  Structure of potential character outputs
