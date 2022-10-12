@@ -22,7 +22,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function getRandomInt(max) {
-  return Math.ceil(Math.random() * max)
+  return Math.floor(Math.random() * max)
 }
 
 
@@ -52,19 +52,19 @@ if (passwordLength < 8 || passwordLength > 128) {
 //  Structure of potential character outputs
  var potentialCharacters = []
 if (useUppercase) {
-  potentialCharacters = potentialCharacters.concat(uppercase)
+  potentialCharacters = potentialCharacters.concat(uppercase);
 }
 
 if (useLowercase) {
-  potentialCharacters = potentialCharacters.concat(lowercase)
+  potentialCharacters = potentialCharacters.concat(lowercase);
 }
 
 if (useNumbers) {
-  potentialCharacters = potentialCharacters.concat(numbers)
+  potentialCharacters = potentialCharacters.concat(numbers);
 }
 
 if (useSpecialCharacters) {
-  potentialCharacters = potentialCharacters.concat(special)
+  potentialCharacters = potentialCharacters.concat(special);
 }
 
 // Create the password of "passwordLength" length
